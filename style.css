@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --active-color:#CF0C6B;
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background:  linear-gradient(180deg, rgba(29, 27, 141, 0.83) 0%, rgba(3, 189, 241, 0.84) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+ 
+}
+.container{
+    background: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.container h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 1000;
+    margin-bottom: 30px;
+}
+.container a{
+    text-decoration: none;
+    color:var(--active-color)  ;
+}
+.form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px black solid;
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+    color: black;
+    font-size: 18px;
+}
+.form-control input:focus,.form-control input:valid{
+    outline: 0;
+    border-bottom: 2px var(--active-color) solid;
+}
+.btn{
+    cursor: pointer;
+    background-color: var(--active-color);
+    color: white;
+    font-family: inherit;
+    font-size: 20px;
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+.text{
+    margin-top: 30px;
+    width: 100%;
+    padding: 0 20px;
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0; 
+}
+.form-control label span{
+   display: inline-block;
+   font-size: 18px;
+   min-width: 5px;
+   transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-control input:focus + label span,.form-control input:valid + label span{
+   color: var(--active-color);
+   transform: translateY(-30px);
+}
